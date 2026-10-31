@@ -12,59 +12,79 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
-        //
         $projects = [
             [
                 'title' => 'Sistem Informasi Akademik',
-                'description' => 'Aplikasi berbasis web untuk mengelola data mahasiswa, jadwal kuliah, dan nilai perkuliahan',
-                'teknologi' => 'Laravel & bootstrap',
+                'description' => 'Aplikasi berbasis web untuk mengelola data mahasiswa, jadwal kuliah, dan nilai perkuliahan.',
+                'teknologi' => 'Laravel & Bootstrap',
                 'image' => 'project1.jpg',
-                'status' => 'selesai'
+                'status' => 'active',
             ],
             [
-                'title' => 'E-commerce SEO Optimization',
-                'description' => 'Aplikasi optimalisasi struktur heading dan indexing halaman web toko online',
+                'title' => 'E-Commerce SEO Optimization',
+                'description' => 'Aplikasi optimalisasi struktur heading dan indexing halaman web toko online.',
                 'teknologi' => 'PHP & Google Search Console',
                 'image' => 'project2.jpg',
-                'status' => 'In Progress'
-            ],[
-                'title' => 'Redesign Cover dan branding',
-                'description' => 'Perancangan element grafis personal branding dan design sampul buku rekayasa web',
-                'teknologi' => 'Figma & Canva',
-                'image' => 'project3.jpg',
-                'status' => 'selesai'
-            ],[
-                'title' => 'Desain UI/UX Aplikasi Mobile',
-                'description' => 'Perancangan desain antarmuka dan pengalaman pengguna untuk aplikasi mobile berbasis Android',
-                'teknologi' => 'Figma & Adobe XD',
-                'image' => 'project4.jpg',
-                'status' => 'selesai'
-            ],[
-                'title' => 'Rekayasa Web Aplikasi E-Learning',
-                'description' => 'Aplikasi berbasis web untuk mengelola materi pembelajaran, ujian online, dan forum diskusi',
-                'teknologi' => 'Laravel & bootstrap',
-                'image' => 'project5.jpg',
-                'status' => 'selesai'
-            ],[
-                'title' => 'portal Informasi Kampus',
-                'description' => 'Aplikasi berbasis web untuk mengelola informasi akademik, berita kampus, dan pengumuman kegiatan',
-                'teknologi' => 'Laravel & bootstrap',
-                'image' => 'project6.jpg',
-                'status' => 'selesai'
-            ],[
-                'title' => 'informasi Akademik Mahasiswa',
-                'description' => 'Aplikasi berbasis web untuk mengelola data mahasiswa, jadwal kuliah, dan nilai perkuliahan',
-                'teknologi' => 'Laravel & bootstrap',
-                'image' => 'project7.jpg',
-                'status' => 'selesai'
-            ],[
-                'title' => 'Sistem inventaris Perpustakaan',
-                'description' => 'Aplikasi berbasis web untuk mengelola data buku, peminjaman, dan pengembalian buku perpustakaan',
-                'teknologi' => 'Laravel & livewire',
-                'image' => 'project8.jpg',
-                'status' => 'in progress'
+                'status' => 'archived',
             ],
+            [
+                'title' => 'Aplikasi Manajemen Proyek',
+                'description' => 'Aplikasi untuk mengelola proyek, tugas, dan kolaborasi tim secara efisien.',
+                'teknologi' => 'Laravel & React',
+                'image' => 'project3.jpg',
+                'status' => 'active',
+            ],
+            [
+                'title' => 'Sistem Informasi Perpustakaan',
+                'description' => 'Aplikasi untuk mengelola data buku, peminjaman, dan pengembalian di perpustakaan.',
+                'teknologi' => 'Laravel & Vue.js',
+                'image' => 'project4.jpg',
+                'status' => 'archived',
+            ],
+            [
+                'title' => 'Aplikasi Pemesanan Makanan Online',
+                'description' => 'Aplikasi untuk memesan makanan secara online dengan fitur pembayaran digital.',
+                'teknologi' => 'Laravel & React Native',
+                'image' => 'project5.jpg',
+                'status' => 'active',
+            ],
+            [
+                'title' => 'Sistem Informasi Kepegawaian',
+                'description' => 'Aplikasi untuk mengelola data pegawai, absensi, dan cuti secara digital.',
+                'teknologi' => 'Laravel & Bootstrap',
+                'image' => 'project6.jpg',
+                'status' => 'archived',
+            ],
+            [
+                'title' => 'Aplikasi Manajemen Inventaris',
+                'description' => 'Aplikasi untuk mengelola stok barang, pemesanan, dan laporan inventaris.',
+                'teknologi' => 'Laravel & Vue.js',
+                'image' => 'project7.jpg',
+                'status' => 'active',
+            ],
+            [
+                'title' => 'Sistem Informasi Penjualan',
+                'description' => 'Aplikasi untuk mengelola data penjualan, pelanggan, dan laporan penjualan.',
+                'teknologi' => 'Laravel & React',
+                'image' => 'project8.jpg',
+                'status' => 'archived',
+            ],
+            [
+                'title' => 'Aplikasi Pemesanan Tiket Online',
+                'description' => 'Aplikasi untuk memesan tiket transportasi secara online dengan fitur pembayaran digital.',
+                'teknologi' => 'Laravel & React Native',
+                'image' => 'project9.jpg',
+                'status' => 'active',
+            ],
+            [
+                'title' => 'Sistem Informasi Akademik Mobile',
+                'description' => 'Aplikasi mobile untuk mengakses data akademik mahasiswa secara real-time.',
+                'teknologi' => 'Flutter & Firebase',
+                'image' => 'project10.jpg',
+                'status' => 'archived',
+            ],            
         ];
+
         foreach ($projects as $project) {
             \App\Models\Project::create($project);
         }

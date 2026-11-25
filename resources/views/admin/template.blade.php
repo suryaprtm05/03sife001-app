@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.8/css/dataTables.min.css">
     <script>
         const API_TOKEN = "{{ session('api_token') }}";
+        console.log("API Token:", API_TOKEN);
     </script>
     <style>
         body {
@@ -91,6 +92,7 @@
         <h5 class="text-center text-white py-3">Admin Menu</h5>
         <a href="{{ route('admin.dashboard') }}">Dashboard</a>
         <a href="{{ route('projects.index') }}">Data project</a>
+        <a href="{{ route('admin.users') }}">Data Users</a>
     </div>
 
     <div class="content p-3 d-flex flex-column">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminProjectController;
 use App\Http\Controllers\Auth\AdminAuthController;
+use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     })->name('admin.dashboard');
 
 Route::get('/projects/pdf', [AdminProjectController::class, 'cetakPdf'])->name('projects.pdf');
+Route::get('/users', [UserController::class, 'index'])->name('admin.users');
+Route::get('/list-users', [UserController::class, 'listUsers'])->name('list-users');
 
     Route::resource('projects', AdminProjectController::class);
 Route::get('/logout', function () {
